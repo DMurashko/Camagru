@@ -1,0 +1,59 @@
+
+
+body { background-color: white}
+	/*h1 {font-family: Arial, Helvetica, sans-serif; color: white; text-align: center}
+	.last {font-family: monospace; text-align: right}
+	.main {font-family: gill sans; font-style: italic; font: 20pt/30pt; text-align: justify; color: violet; margin-left: 10%}
+	table {padding: 1cm; width: 100%}
+	td {width: 50%; text-align: center}*/
+	header {
+		height: 1cm;
+		width: 100%;
+		background: #D8D8D8;
+		color: #813b81;
+		font-family: Abril Fatface;
+		font-size: 20pt;
+		text-align: center;
+		position: fixed;
+		top: 0;
+		left: 0;
+	}
+
+	#signIn {
+		height: 1cm;
+		width: 2cm;
+		background: green;
+		color: white;
+		font-family: Abril Fatface;
+		font-size: 15pt;
+		text-align: center;
+		padding-top: 4pt;
+		float: left;
+		top: 0;
+		box-sizing: border-box;
+	}
+
+	#signUp {
+		height: 1cm;
+		width: 2cm;
+		background: green;
+		color: white;
+		font-family: Abril Fatface;
+		font-size: 15pt;
+		text-align: center;
+		padding-top: 4pt;
+		float: left;
+		top: 0;
+		box-sizing: border-box;
+	}
+
+	.main {
+		font-family: gill sans; 
+		font-style: italic; 
+		font: 20pt; 
+		text-align: center;
+	}
+
+	.left {
+		float: left;
+	}
