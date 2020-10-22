@@ -1,0 +1,52 @@
+@mixin grid-centre {
+	display: grid;
+	place-items: center center;
+}
+
+main {
+	color: #FFD200;
+	@include grid-centre;
+	font-family: 'Montserrat', sans-serif;
+	width: 100vw;
+	padding: 2vw 15vw 2vw 15vw;
+	box-sizing: border-box;
+
+	.user-info {
+		@include grid-centre;
+		grid-template-columns: 200px 1fr;
+		height: 300px;
+	}
+
+	.user-logo {
+		@include grid-centre;
+	}
+
+	.user-gallery {
+		@include grid-centre;
+		grid-template-columns: 1fr 1fr 1fr;
+		grid-gap: 5vw;
+		width: 70vw;
+
+		img {
+			width: 20vw;
+			height: 20vw;
+			object-fit: cover;
+			object-position: 50% top;
+		}
+	}
+
+	.usr-name-container {
+		display: grid;
+		place-items: left center;
+		padding-left: 2vw;
+	}
+
+}
+
+/*.box {
+		background-image:url('../images/1.jpg');
+		background-position:center center;
+		background-size:cover;
+		width:20vw;
+		height:20vw;
+	 }*/

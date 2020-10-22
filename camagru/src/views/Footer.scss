@@ -1,0 +1,43 @@
+footer {
+	background-color: white;//#FF9273;
+	color: #FFD200;
+	height: 10vh;
+	display: grid;
+	grid-template-columns: 3fr 1fr 3fr;
+	font-family: 'Montserrat', sans-serif;
+	border-top: 3px solid #3E0470;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	padding: 0 15vw 0 15vw;
+	box-sizing: border-box;
+
+	@mixin header-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 3vh;
+		border-radius: 20%;
+		border-color: #3E0470;
+		border-width: 3px;
+		color: #FFD200;
+	}
+
+	.camButtonContainer {
+		display: flex;
+		justify-content: left;
+		align-items: center;
+	}
+
+	.user-icon, .settings-icon {
+		display: flex;
+		justify-content: space-around;
+		align-items: center;
+	};
+
+	.cameraButton {
+		@include header-button;
+		background-color: #3E0470;
+		width: 10vw;
+	}
+}

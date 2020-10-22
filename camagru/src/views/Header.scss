@@ -1,0 +1,58 @@
+header {
+	background-color: white;//#FF9273;
+	color: #FFD200;
+	height: 10vh;
+	display: grid;
+	grid-template-columns: 3fr 3fr 1.5fr 1.5fr;
+	place-items: center center;
+	font-family: 'Montserrat', sans-serif;
+	border-bottom: 3px solid #3E0470;
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	padding: 0 15vw 0 15vw;
+	box-sizing: border-box;
+
+	$header-component-width: 10vw;
+	@mixin header-button {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 3vh;
+		border-radius: 20%;
+		border-color: #3E0470;
+		border-width: 3px;
+		color: #FFD200;
+	}
+
+		.title {
+			font-weight: 500;
+			font-size: 35px;
+			width: $header-component-width;
+		};
+
+		.searchBar {
+			display: flex;
+
+			.searchArea {
+				width: 15vw;
+				@include header-button;
+			}
+	
+			.searchButton {
+				@include header-button;
+				background-color: #3E0470;
+			}
+		}
+
+		.auth-button {
+			width: $header-component-width;
+			@include header-button
+		};
+
+		.auth-button-clicked {
+			width: $header-component-width;
+			@include header-button;
+			background-color: #3E0470;
+		}
+}
