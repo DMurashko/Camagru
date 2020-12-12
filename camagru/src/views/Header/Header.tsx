@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import './Header.scss';
+import { NavLink } from 'react-router-dom';
+import Styles from './Header.module.scss';
+//import {StoreContext, ContextProps} from '../App';
 
 interface VoidProps {}
 
@@ -25,7 +27,7 @@ class AuthorisationButton extends Component<AuthButtonProps, AuthButtonState> {
 
 	render() {
 		return(
-			<div className={this.state.styleClass} onMouseDown={this.handleClick} onMouseUp={this.handleClick}>{this.props.text}</div>
+			<div className={Styles[this.state.styleClass]} onMouseDown={this.handleClick} onMouseUp={this.handleClick}>{this.props.text}</div>
 		);
 	}
 
@@ -35,6 +37,28 @@ class AuthorisationButton extends Component<AuthButtonProps, AuthButtonState> {
 		else this.setState({styleClass: "auth-button"});
 	}
 }
+
+/* function AuthorisationButton(props: AuthButtonProps) {
+	return(
+		<StoreContext.Consumer>
+			{
+				styleClass => {
+					let handleClick = (event: any) => {
+						if (event.target.classList.includes("auth-button")) {
+							event.target.classList.remove("auth-button");
+							event.target.classList.toogle("auth-button-clicked");
+						}
+						else {
+							event.target.classList.remove("auth-button-clicked");
+							event.target.classList.toogle("auth-button");
+						};
+					}
+					return <div className={styleClass} onMouseDown={handleClick} onMouseUp={handleClick}>{props.text}</div>
+				}
+			}
+		</StoreContext.Consumer>
+	);
+} */
 
 interface SearchState {
 	currentInput: string | undefined;
@@ -53,9 +77,9 @@ class SearchBar extends Component<VoidProps, SearchState> {
 	
 	render() {
 		return(
-			<div className="searchBar">
-				<input type="text" className="searchArea" placeholder="Who are you looking for?" onChange={this.changeHandler} />
-				<button type="submit" className="searchButton"> Los geht`s!
+			<div className={Styles.searchBar}>
+				<input type="text" className={Styles.searchArea} placeholder="Who are you looking for?" onChange={this.changeHandler} />
+				<button type="submit" className={Styles.searchButton}> Los geht`s!
 				</button>
 			</div>
 		);
@@ -77,7 +101,7 @@ export default class Header extends Component {
 		return (
 			<header>
 				<SearchBar />
-				<div className="title">CAMAGRU</div>
+				<div className={Styles.title}><NavLink to="/">CAMAGRU</NavLink></div>
 				<AuthorisationButton text="Sign In"/>
 				<AuthorisationButton text="Sign Up"/>
 			</header>

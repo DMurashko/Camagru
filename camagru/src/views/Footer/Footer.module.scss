@@ -29,15 +29,20 @@ footer {
 		align-items: center;
 	}
 
-	.user-icon, .settings-icon {
+	.userIcon, .settingsIcon {
 		display: flex;
 		justify-content: space-around;
 		align-items: center;
+		a {
+			color: #FFD200;
+			text-decoration-line: none;
+		}
 	};
 
 	.cameraButton {
 		@include header-button;
 		background-color: #3E0470;
 		width: 10vw;
+		padding: 2vw 1vw;
 	}
 }

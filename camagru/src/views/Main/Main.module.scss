@@ -8,24 +8,26 @@ main {
 	@include grid-centre;
 	font-family: 'Montserrat', sans-serif;
 	width: 100vw;
+	margin-top: 10vh;
 	padding: 2vw 15vw 2vw 15vw;
 	box-sizing: border-box;
 
-	.user-info {
+	.userInfo {
 		@include grid-centre;
 		grid-template-columns: 200px 1fr;
 		height: 300px;
 	}
 
-	.user-logo {
+	.userLogo {
 		@include grid-centre;
 	}
 
-	.user-gallery {
+	.userGallery {
 		@include grid-centre;
 		grid-template-columns: 1fr 1fr 1fr;
 		grid-gap: 5vw;
 		width: 70vw;
+		margin-bottom: 30vh;
 
 		img {
 			width: 20vw;
@@ -35,10 +37,27 @@ main {
 		}
 	}
 
-	.usr-name-container {
+	.userNameContainer {
 		display: grid;
 		place-items: left center;
 		padding-left: 2vw;
+	}
+
+	div input {
+		.titleInput, .url {
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			height: 3vh;
+			border-radius: 20%;
+			border-color: #3E0470;
+			border-width: 5px;
+			color: #FFD200;
+		}
+	}
+
+	form {
+		@include grid-centre;
 	}
 
 }
